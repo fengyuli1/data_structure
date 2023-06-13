@@ -1,0 +1,30 @@
+
+[project]
+name = "data_structure"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "fengyuli", email = "270676153@qq.com"},
+]
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=23.3.0",
+    "isort>=5.12.0",
+    "flake8>=5.0.4",
+]
+
+[tool.pdm.scripts]
+check = {cmd = [
+    "black ./src",
+    "isort ./src",
+    "flake8 ./src",
+]}
